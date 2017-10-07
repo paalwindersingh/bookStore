@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.p1694151.bookstore.model.Author;
 import com.p1694151.bookstore.model.Book;
@@ -58,7 +59,19 @@ public class BookAdapater extends ArrayAdapter<Book> {
             }
             new DownloadImageTask(coverIv)
                     .execute(book.getCover());
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (book.getQuantity() > 0) {
+                        Toast.makeText(getContext(), "Book added to your cart", Toast.LENGTH_SHORT).show();
+                        book.setQuantity(book.getQuantity() - 1);
+                    }else{
+                        Toast.makeText(getContext(), "This book is currently unavailable! Please check again later.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
+
         return itemView;  //Sending the view back, in this case as a row.
     }
 }
