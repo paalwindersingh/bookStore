@@ -16,8 +16,16 @@ public class Book {
     private boolean shipToUSA;
     private String title;
 
-    public Book() {
-
+    public Book(int author_id, String category, String cover, String date, String publisher, int quantity, boolean shipToCanada, boolean shipToUSA, String title) {
+        this.author_id = author_id;
+        this.category = category;
+        this.cover = cover;
+        this.date = date;
+        this.publisher = publisher;
+        this.quantity = quantity;
+        this.shipToCanada = shipToCanada;
+        this.shipToUSA = shipToUSA;
+        this.title = title;
     }
 
     public int getAuthor_id() {
