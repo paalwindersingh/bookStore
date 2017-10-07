@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cover"
+        android:gravity="center_vertical"
+        android:text="NAME"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/cover"
+        android:gravity="center_vertical"
+        android:text="author"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/author"
+        android:layout_toRightOf="@+id/cover"
+        android:gravity="center_vertical"
+        android:text="Date"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/not_available"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:text="count"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/not_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_toRightOf="@+id/cover"
+        android:gravity="center_vertical"
+        android:text="@string/unavalable_in_canada"
+        android:textSize="14sp" />
+
+</RelativeLayout>
