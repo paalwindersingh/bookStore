@@ -6,6 +6,7 @@ package com.p1694151.bookstore.model;
 
 public class Book {
 
+    private int id;
     private int author_id;
     private String category;
     private String cover;
@@ -16,7 +17,8 @@ public class Book {
     private boolean shipToUSA;
     private String title;
 
-    public Book(int author_id, String category, String cover, String date, String publisher, int quantity, boolean shipToCanada, boolean shipToUSA, String title) {
+    public Book(int id, int author_id, String category, String cover, String date, String publisher, int quantity, boolean shipToCanada, boolean shipToUSA, String title) {
+        this.id = id;
         this.author_id = author_id;
         this.category = category;
         this.cover = cover;
@@ -26,6 +28,14 @@ public class Book {
         this.shipToCanada = shipToCanada;
         this.shipToUSA = shipToUSA;
         this.title = title;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getAuthor_id() {

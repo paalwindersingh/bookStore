@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">bookStore</string>
+    <string name="unavalable_in_canada">Unavalable in Canada</string>
 </resources>
